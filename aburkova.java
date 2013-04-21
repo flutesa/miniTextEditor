@@ -1,19 +1,19 @@
-/**’ест Ь ‚Џ’-221
- * Ћписание: Љонтрольное задание, длЯ определениЯ готовности к обучению на курсе.
-Ќапишите набор классов, который решает следующую задачу:
-1. Џри старте приложениЯ пользователю предъЯвлЯетсЯ диалоговое окно(экземплЯр класса
-JFrame), которое содержит поле ввода (экземплЯр класса JTextField), поле вывода
-сообщений приложениЯ (экземплЯр класса JTextArea) и набор следующих кнопок
-(экземплЯры класса JButton): кнопку подтверждениЯ ввода, кнопку очистки полЯ ввода и
-кнопку выхода из приложениЯ.
-2. ’акже при старте приложениЯ открываетсЯ некоторый (заранее предопределенный) текстовый файл
-3. Џользователь может в поле ввода ввести произвольную строку, очистить это поле, а также 
-завершить приложение
-4. Џрограмма при нажатии на кнопку подтверждениЯ ввода считывает содержимое полЯ
-ввода и записывает его в открытый файл при условии, что такаЯ строка (без учета
-разницы в регистрах) в данном файле не содержитсЯ. …сли такаЯ строка в файле уже есть,
-то программа выводит сообщение об этом в поле вывода сообщений.
-5. Џри нажатии на кнопку выхода из приложениЯ программа завершает свою работу
+/**РўРµСЃС‚ в„– Р’РџРў-221
+ * РћРїРёСЃР°РЅРёРµ: РљРѕРЅС‚СЂРѕР»СЊРЅРѕРµ Р·Р°РґР°РЅРёРµ, РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РіРѕС‚РѕРІРЅРѕСЃС‚Рё Рє РѕР±СѓС‡РµРЅРёСЋ РЅР° РєСѓСЂСЃРµ.
+РќР°РїРёС€РёС‚Рµ РЅР°Р±РѕСЂ РєР»Р°СЃСЃРѕРІ, РєРѕС‚РѕСЂС‹Р№ СЂРµС€Р°РµС‚ СЃР»РµРґСѓСЋС‰СѓСЋ Р·Р°РґР°С‡Сѓ:
+1. РџСЂРё СЃС‚Р°СЂС‚Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ РїСЂРµРґСЉСЏРІР»СЏРµС‚СЃСЏ РґРёР°Р»РѕРіРѕРІРѕРµ РѕРєРЅРѕ(СЌРєР·РµРјРїР»СЏСЂ РєР»Р°СЃСЃР°
+JFrame), РєРѕС‚РѕСЂРѕРµ СЃРѕРґРµСЂР¶РёС‚ РїРѕР»Рµ РІРІРѕРґР° (СЌРєР·РµРјРїР»СЏСЂ РєР»Р°СЃСЃР° JTextField), РїРѕР»Рµ РІС‹РІРѕРґР°
+СЃРѕРѕР±С‰РµРЅРёР№ РїСЂРёР»РѕР¶РµРЅРёСЏ (СЌРєР·РµРјРїР»СЏСЂ РєР»Р°СЃСЃР° JTextArea) Рё РЅР°Р±РѕСЂ СЃР»РµРґСѓСЋС‰РёС… РєРЅРѕРїРѕРє
+(СЌРєР·РµРјРїР»СЏСЂС‹ РєР»Р°СЃСЃР° JButton): РєРЅРѕРїРєСѓ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РІРІРѕРґР°, РєРЅРѕРїРєСѓ РѕС‡РёСЃС‚РєРё РїРѕР»СЏ РІРІРѕРґР° Рё
+РєРЅРѕРїРєСѓ РІС‹С…РѕРґР° РёР· РїСЂРёР»РѕР¶РµРЅРёСЏ.
+2. РўР°РєР¶Рµ РїСЂРё СЃС‚Р°СЂС‚Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ РЅРµРєРѕС‚РѕСЂС‹Р№ (Р·Р°СЂР°РЅРµРµ РїСЂРµРґРѕРїСЂРµРґРµР»РµРЅРЅС‹Р№) С‚РµРєСЃС‚РѕРІС‹Р№ С„Р°Р№Р»
+3. РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ РјРѕР¶РµС‚ РІ РїРѕР»Рµ РІРІРѕРґР° РІРІРµСЃС‚Рё РїСЂРѕРёР·РІРѕР»СЊРЅСѓСЋ СЃС‚СЂРѕРєСѓ, РѕС‡РёСЃС‚РёС‚СЊ СЌС‚Рѕ РїРѕР»Рµ, Р° С‚Р°РєР¶Рµ 
+Р·Р°РІРµСЂС€РёС‚СЊ РїСЂРёР»РѕР¶РµРЅРёРµ
+4. РџСЂРѕРіСЂР°РјРјР° РїСЂРё РЅР°Р¶Р°С‚РёРё РЅР° РєРЅРѕРїРєСѓ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РІРІРѕРґР° СЃС‡РёС‚С‹РІР°РµС‚ СЃРѕРґРµСЂР¶РёРјРѕРµ РїРѕР»СЏ
+РІРІРѕРґР° Рё Р·Р°РїРёСЃС‹РІР°РµС‚ РµРіРѕ РІ РѕС‚РєСЂС‹С‚С‹Р№ С„Р°Р№Р» РїСЂРё СѓСЃР»РѕРІРёРё, С‡С‚Рѕ С‚Р°РєР°СЏ СЃС‚СЂРѕРєР° (Р±РµР· СѓС‡РµС‚Р°
+СЂР°Р·РЅРёС†С‹ РІ СЂРµРіРёСЃС‚СЂР°С…) РІ РґР°РЅРЅРѕРј С„Р°Р№Р»Рµ РЅРµ СЃРѕРґРµСЂР¶РёС‚СЃСЏ. Р•СЃР»Рё С‚Р°РєР°СЏ СЃС‚СЂРѕРєР° РІ С„Р°Р№Р»Рµ СѓР¶Рµ РµСЃС‚СЊ,
+С‚Рѕ РїСЂРѕРіСЂР°РјРјР° РІС‹РІРѕРґРёС‚ СЃРѕРѕР±С‰РµРЅРёРµ РѕР± СЌС‚РѕРј РІ РїРѕР»Рµ РІС‹РІРѕРґР° СЃРѕРѕР±С‰РµРЅРёР№.
+5. РџСЂРё РЅР°Р¶Р°С‚РёРё РЅР° РєРЅРѕРїРєСѓ РІС‹С…РѕРґР° РёР· РїСЂРёР»РѕР¶РµРЅРёСЏ РїСЂРѕРіСЂР°РјРјР° Р·Р°РІРµСЂС€Р°РµС‚ СЃРІРѕСЋ СЂР°Р±РѕС‚Сѓ
 
 Author: Burkova A.S.
 Date: 20 january 2013
@@ -30,32 +30,32 @@ public class aburkova {
 	public static void main(String[] args) {
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
-				makeGUI(); // вызов метода наведениЯ марафета (п.1)
+				makeGUI(); // РІС‹Р·РѕРІ РјРµС‚РѕРґР° РЅР°РІРµРґРµРЅРёСЏ РјР°СЂР°С„РµС‚Р° (Рї.1)
 
 			}
 		});
 	}
 
 	private static void makeGUI() {
-		// создаЮм окно
+		// СЃРѕР·РґР°С‘Рј РѕРєРЅРѕ
 		JFrame frame = new JFrame("Burkova Alexandra");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setPreferredSize(new Dimension(500, 700));
-		// устанавливаем компоненты окна
+		// СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РєРѕРјРїРѕРЅРµРЅС‚С‹ РѕРєРЅР°
 		addComponents(frame.getContentPane());
 		frame.pack();
 		frame.setVisible(true);
 	}
 
 	private static void addComponents(Container pane) {
-		// описание расположениЯ элементов в окне
+		// РѕРїРёСЃР°РЅРёРµ СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ СЌР»РµРјРµРЅС‚РѕРІ РІ РѕРєРЅРµ
 		pane.setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
 		c.fill = GridBagConstraints.HORIZONTAL;
 		c.weightx = 0.5;
 		c.insets = new Insets(10, 20, 10, 20);
 
-		final JTextField tField = new JTextField("‚ведите текст", 300);
+		final JTextField tField = new JTextField("вЂљРІРµРґРёС‚Рµ С‚РµРєСЃС‚", 300);
 		tField.setEditable(true);
 		c.gridwidth = 3;
 		c.ipady = 30;
@@ -71,24 +71,24 @@ public class aburkova {
 		c.gridy = 1;
 		pane.add(tArea, c);
 
-		final JButton bEnter = new JButton("‚вести");
+		final JButton bEnter = new JButton("вЂљРІРµСЃС‚Рё");
 		c.gridwidth = 1;
 		c.ipady = 15;
 		c.gridx = 0;
 		c.gridy = 2;
 		pane.add(bEnter, c);
 
-		final JButton bClear = new JButton("Ћчистить");
+		final JButton bClear = new JButton("Р‹С‡РёСЃС‚РёС‚СЊ");
 		c.gridx = 1;
 		c.gridy = 2;
 		pane.add(bClear, c);
 
-		final JButton bExit = new JButton("‚ыйти");
+		final JButton bExit = new JButton("вЂљС‹Р№С‚Рё");
 		c.gridx = 2;
 		c.gridy = 2;
 		pane.add(bExit, c);
 
-		// поле вывода содержимого txt файла (п. 2)
+		// РїРѕР»Рµ РІС‹РІРѕРґР° СЃРѕРґРµСЂР¶РёРјРѕРіРѕ txt С„Р°Р№Р»Р° (Рї. 2)
 		final JTextArea tTXT = new JTextArea(read());
 		tTXT.setEditable(false);
 		c.gridwidth = 3;
@@ -97,22 +97,22 @@ public class aburkova {
 		c.gridy = 3;
 		pane.add(tTXT, c);
 
-		// в случае большого объЮма текста, скролл длЯ прокрутки содержимого файла в поле
+		// РІ СЃР»СѓС‡Р°Рµ Р±РѕР»СЊС€РѕРіРѕ РѕР±СЉС‘РјР° С‚РµРєСЃС‚Р°, СЃРєСЂРѕР»Р» РґР»СЏ РїСЂРѕРєСЂСѓС‚РєРё СЃРѕРґРµСЂР¶РёРјРѕРіРѕ С„Р°Р№Р»Р° РІ РїРѕР»Рµ
 		JScrollPane scrollPane = new JScrollPane(tTXT);
 		pane.add(scrollPane, c);
 
-		// обработка событий в текстовом поле
+		// РѕР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёР№ РІ С‚РµРєСЃС‚РѕРІРѕРј РїРѕР»Рµ
 		tField.addFocusListener(new FocusListener() {
 			public void focusGained(FocusEvent arg0) {
-				tArea.setText("Њожно добавить текст в поле");
+				tArea.setText("РњРѕР¶РЅРѕ РґРѕР±Р°РІРёС‚СЊ С‚РµРєСЃС‚ РІ РїРѕР»Рµ");
 			}
 
 			public void focusLost(FocusEvent arg0) {
-				tArea.setText("’екст в поле пока не редактируетсЯ");
+				tArea.setText("РўРµРєСЃС‚ РІ РїРѕР»Рµ РїРѕРєР° РЅРµ СЂРµРґР°РєС‚РёСЂСѓРµС‚СЃСЏ");
 			}
 		});
 		
-		// обработка клика мышки в поле длЯ его очищениЯ
+		// РѕР±СЂР°Р±РѕС‚РєР° РєР»РёРєР° РјС‹С€РєРё РІ РїРѕР»Рµ РґР»СЏ РµРіРѕ РѕС‡РёС‰РµРЅРёСЏ
 		tField.addMouseListener(new MouseListener() {
 			public void mouseClicked(MouseEvent arg0) {
 				tField.setText("");
@@ -123,31 +123,31 @@ public class aburkova {
 			public void mouseReleased(MouseEvent arg0) { }
 		});
 		
-		// обработка процесса набора текста длЯ уведомлениЯ
+		// РѕР±СЂР°Р±РѕС‚РєР° РїСЂРѕС†РµСЃСЃР° РЅР°Р±РѕСЂР° С‚РµРєСЃС‚Р° РґР»СЏ СѓРІРµРґРѕРјР»РµРЅРёСЏ
 		tField.addKeyListener(new KeyListener() {
 			public void keyPressed(KeyEvent arg0) {
-				tArea.setText("„обавлЯем текст в поле...");
+				tArea.setText("Р”РѕР±Р°РІР»СЏРµРј С‚РµРєСЃС‚ РІ РїРѕР»Рµ...");
 			}
 			public void keyReleased(KeyEvent arg0) {
-				tArea.setText("„обавлЯем текст в поле...");
+				tArea.setText("Р”РѕР±Р°РІР»СЏРµРј С‚РµРєСЃС‚ РІ РїРѕР»Рµ...");
 			}
 			public void keyTyped(KeyEvent arg0) {
-				tArea.setText("„обавлЯем текст в поле...");
+				tArea.setText("Р”РѕР±Р°РІР»СЏРµРј С‚РµРєСЃС‚ РІ РїРѕР»Рµ...");
 			}
 		});
 
-		// обработка событий от кнопок (п.3)
+		// РѕР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёР№ РѕС‚ РєРЅРѕРїРѕРє (Рї.3)
 		bEnter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String keyboardImput = (String) tField.getText();
 
-				// проверка на наличие данной строки в файле
+				// РїСЂРѕРІРµСЂРєР° РЅР° РЅР°Р»РёС‡РёРµ РґР°РЅРЅРѕР№ СЃС‚СЂРѕРєРё РІ С„Р°Р№Р»Рµ
 				if (!checkText(keyboardImput, read())) {
 					write(keyboardImput);
 					tTXT.setText(read());
-					tArea.setText("Cтрока добавлена в файл!");
+					tArea.setText("CС‚СЂРѕРєР° РґРѕР±Р°РІР»РµРЅР° РІ С„Р°Р№Р»!");
 				} else {
-					tArea.setText("’акаЯ строка в файле уже есть!");
+					tArea.setText("РўР°РєР°СЏ СЃС‚СЂРѕРєР° РІ С„Р°Р№Р»Рµ СѓР¶Рµ РµСЃС‚СЊ!");
 				}
 			}
 		});
@@ -155,20 +155,20 @@ public class aburkova {
 		bClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				tField.setText("");
-				tArea.setText("Џоле очищено!");
+				tArea.setText("РџРѕР»Рµ РѕС‡РёС‰РµРЅРѕ!");
 			}
 		});
 
 		bExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				tArea.setText("‚ыхожу из приложениЯ...");
-				System.exit(0); // выход из приложениЯ по требованию
-								// пользователЯ (п.4)
+				tArea.setText("РІС‹С…РѕР¶Сѓ РёР· РїСЂРёР»РѕР¶РµРЅРёСЏ...");
+				System.exit(0); // РІС‹С…РѕРґ РёР· РїСЂРёР»РѕР¶РµРЅРёСЏ РїРѕ С‚СЂРµР±РѕРІР°РЅРёСЋ
+								// РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ (Рї.4)
 			}
 		});
 	}
 
-	public static String read() { // читаем данные из файла
+	public static String read() { // С‡РёС‚Р°РµРј РґР°РЅРЅС‹Рµ РёР· С„Р°Р№Р»Р°
 		StringBuilder sb = new StringBuilder();
 		try {
 			BufferedReader in = new BufferedReader(new FileReader(new File(
@@ -188,7 +188,7 @@ public class aburkova {
 		return sb.toString();
 	}
 
-	public static void write(String text) { // записываем данные в конец файла
+	public static void write(String text) { // Р·Р°РїРёСЃС‹РІР°РµРј РґР°РЅРЅС‹Рµ РІ РєРѕРЅРµС† С„Р°Р№Р»Р°
 		try {
 			FileWriter out = new FileWriter(
 					new File("src/asadov.txt").getAbsoluteFile(), true);
@@ -204,7 +204,7 @@ public class aburkova {
 	}
 
 	private static boolean checkText(String subString, String string) {
-		// проверЯем введЮнную строку на наличие в текстовом файле (п.4)
+		// РїСЂРѕРІРµСЂСЏРµРј РІРІРµРґС‘РЅРЅСѓСЋ СЃС‚СЂРѕРєСѓ РЅР° РЅР°Р»РёС‡РёРµ РІ С‚РµРєСЃС‚РѕРІРѕРј С„Р°Р№Р»Рµ (Рї.4)
 		if (string.length() < subString.length())
 			return false;
 
