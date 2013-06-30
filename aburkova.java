@@ -71,19 +71,19 @@ public class aburkova {
 		c.gridy = 1;
 		pane.add(tArea, c);
 
-		final JButton bEnter = new JButton("‚вести");
+		final JButton bEnter = new JButton("Ввести");
 		c.gridwidth = 1;
 		c.ipady = 15;
 		c.gridx = 0;
 		c.gridy = 2;
 		pane.add(bEnter, c);
 
-		final JButton bClear = new JButton("Ћчистить");
+		final JButton bClear = new JButton("Очистить");
 		c.gridx = 1;
 		c.gridy = 2;
 		pane.add(bClear, c);
 
-		final JButton bExit = new JButton("‚ыйти");
+		final JButton bExit = new JButton("Выйти");
 		c.gridx = 2;
 		c.gridy = 2;
 		pane.add(bExit, c);
