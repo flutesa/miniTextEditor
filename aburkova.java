@@ -55,7 +55,7 @@ public class aburkova {
 		c.weightx = 0.5;
 		c.insets = new Insets(10, 20, 10, 20);
 
-		final JTextField tField = new JTextField("‚ведите текст", 300);
+		final JTextField tField = new JTextField("Введите текст", 300);
 		tField.setEditable(true);
 		c.gridwidth = 3;
 		c.ipady = 30;
