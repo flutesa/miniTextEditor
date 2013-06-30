@@ -16,22 +16,24 @@ JFrame), которое содержит поле ввода (экземпляр
 5. При нажатии на кнопку выхода из приложения программа завершает свою работу
 
 Author: Burkova A.S.
-Date: 20 january 2013
+Date: 30 june 2013
  */
 
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
-
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
-public class aburkova {
 
+public class Aburkova extends Frame{
+        public static String fileName;
+        
 	public static void main(String[] args) {
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
+                                fileName = OpenFileDialog();
 				makeGUI(); // вызов метода наведения марафета (п.1)
-
 			}
 		});
 	}
@@ -111,7 +113,7 @@ public class aburkova {
 				tArea.setText("Текст в поле пока не редактируется");
 			}
 		});
-		
+
 		// обработка клика мышки в поле для его очищения
 		tField.addMouseListener(new MouseListener() {
 			public void mouseClicked(MouseEvent arg0) {
@@ -122,7 +124,7 @@ public class aburkova {
 			public void mousePressed(MouseEvent arg0) { }
 			public void mouseReleased(MouseEvent arg0) { }
 		});
-		
+
 		// обработка процесса набора текста для уведомления
 		tField.addKeyListener(new KeyListener() {
 			public void keyPressed(KeyEvent arg0) {
@@ -166,13 +168,14 @@ public class aburkova {
 								// пользователя (п.4)
 			}
 		});
+                
 	}
 
 	public static String read() { // читаем данные из файла
 		StringBuilder sb = new StringBuilder();
 		try {
 			BufferedReader in = new BufferedReader(new FileReader(new File(
-					"src/asadov.txt").getAbsoluteFile()));
+					fileName).getAbsoluteFile()));
 			try {
 				String s;
 				while ((s = in.readLine()) != null) {
@@ -191,7 +194,7 @@ public class aburkova {
 	public static void write(String text) { // записываем данные в конец файла
 		try {
 			FileWriter out = new FileWriter(
-					new File("src/asadov.txt").getAbsoluteFile(), true);
+					new File(fileName).getAbsoluteFile(), true);
 			try {
 				out.append("\n");
 				out.append(text);
@@ -215,7 +218,6 @@ public class aburkova {
 			patternHash += subString.charAt(i);
 			currentHash += string.charAt(i);
 		}
-
 		int end = string.length() - subString.length() + 1;
 		for (int i = 0; i < end; i++) {
 			if (patternHash == currentHash)
@@ -228,5 +230,25 @@ public class aburkova {
 		}
 		return false;
 	}
+
+        public static String OpenFileDialog() {
+            String path = null;
+            
+            JFileChooser chooser = new JFileChooser();
+            FileNameExtensionFilter txtFilter = new FileNameExtensionFilter("Text Files", "txt");
+            chooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+            
+            chooser.setDialogTitle("Выберите текстовый файл");
+            chooser.setAcceptAllFileFilterUsed(false);
+            chooser.setFileFilter(txtFilter);
+
+            if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION || !path.equals("")) {
+                path = ""+chooser.getSelectedFile();            
+            } else if (chooser.showOpenDialog(null) == JFileChooser.CANCEL_OPTION) {
+                JOptionPane.showMessageDialog(new JFrame(), "No Selection!", "", JOptionPane.ERROR_MESSAGE);
+                System.exit(0);
+            }
+            return path;
+        }
 
 }
